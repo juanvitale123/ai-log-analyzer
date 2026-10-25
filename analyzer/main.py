@@ -1,7 +1,7 @@
 """Punto de entrada.
 
 Uso:
-  python -m analyzer.main            # analiza los logs nuevos (lo lanza el timer cada 5 min)
+  python -m analyzer.main            # analiza los logs nuevos (lo lanza el timer cada 2 min)
   python -m analyzer.main --report   # envía el informe de las últimas 24 h
   python -m analyzer.main --dry-run  # analiza y muestra el resultado sin guardar ni avisar
 """

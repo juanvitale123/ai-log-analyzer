@@ -20,4 +20,4 @@ echo "== Escaneo web de rutas típicas =="
 for path in /wp-login.php /wp-admin/ /.env /phpmyadmin/ /.git/config /admin /xmlrpc.php; do
   curl -s -o /dev/null -w "%{http_code} $path\n" "http://$TARGET$path"
 done
-echo "Hecho. En menos de 5 minutos debería llegar la alerta (o lanza el analizador a mano)."
+echo "Hecho. En menos de 2 minutos debería llegar la alerta (o lanza el analizador a mano)."

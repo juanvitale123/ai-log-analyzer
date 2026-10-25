@@ -2,7 +2,7 @@
 
 Analizador de logs para un servidor Ubuntu que usa un modelo de IA en local para detectar incidencias y avisarme por Telegram.
 
-Lo hice para practicar administración de Linux con algo útil: los servidores guardan en los logs todo lo que pasa (intentos de acceso, errores de la web, servicios que se caen), pero nadie se los lee. Este script los revisa cada 5 minutos, le pasa lo importante al modelo y me llega un aviso con lo que pasa y qué hacer.
+Lo hice para practicar administración de Linux con algo útil: los servidores guardan en los logs todo lo que pasa (intentos de acceso, errores de la web, servicios que se caen), pero nadie se los lee. Este script los revisa cada 2 minutos, le pasa lo importante al modelo y me llega un aviso con lo que pasa y qué hacer.
 
 El modelo corre en mi PC con LM Studio, así que los logs no salen de mi red. Esto es importante porque los logs tienen IPs y nombres de usuario.
 
@@ -16,7 +16,7 @@ El modelo corre en mi PC con LM Studio, así que los logs no salen de mi red. Es
 │ /var/log/mysql/*    (base de datos)     │◀─análisis──│ API :1234         │
 │ disco y servicios   (systemctl)         │            └───────────────────┘
 │                                         │
-│ analyzer (Python, timer cada 5 min)     │──alerta──▶ Telegram
+│ analyzer (Python, timer cada 2 min)     │──alerta──▶ Telegram
 │        │                                │
 │        ▼                                │
 │ MySQL: tabla incidents                  │

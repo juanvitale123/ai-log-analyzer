@@ -91,6 +91,10 @@ Alertas en Telegram después de simular un ataque de fuerza bruta SSH y un escan
 
 <img src="docs/screenshots/telegram-alertas.png" width="380">
 
+La respuesta del modelo en LM Studio (Gemma 4 12B en mi GPU): devuelve las incidencias en JSON con la gravedad, la explicación y la recomendación.
+
+<img src="docs/screenshots/lmstudio-respuesta.png" width="700">
+
 ## Estructura
 
 ```

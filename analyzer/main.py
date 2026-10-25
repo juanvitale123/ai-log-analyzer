@@ -21,8 +21,9 @@ def should_alert(severity):
 
 
 def run(dry_run=False):
-    events = collectors.collect_all()
+    events, commit = collectors.collect_all()
     if not events:
+        commit()
         print("Sin eventos nuevos.")
         return
     print(f"{len(events)} eventos detectados, analizando con el modelo...")
@@ -32,7 +33,7 @@ def run(dry_run=False):
         for inc in incidents:
             print(json.dumps(inc, ensure_ascii=False, indent=2))
             print(notifier.format_alert(inc), "\n")
-        return
+        return  # en modo prueba no se marca nada como leído
 
     from . import storage  # solo hace falta MySQL fuera del modo de prueba
 
@@ -48,6 +49,7 @@ def run(dry_run=False):
         storage.save(conn, inc, fp, notified)
         print(f"[{inc['severity']}] {inc['title']} (avisado: {notified})")
     conn.close()
+    commit()  # solo si todo se ha guardado bien
 
 
 def report():

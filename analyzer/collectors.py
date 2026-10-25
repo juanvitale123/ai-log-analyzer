@@ -242,7 +242,13 @@ def service_events():
 
 
 def collect_all():
-    """Ejecuta todos los colectores y guarda hasta dónde se ha leído."""
+    """Ejecuta todos los colectores.
+
+    Devuelve los eventos y una función `commit` que guarda hasta dónde se ha
+    leído. Solo hay que llamarla cuando los eventos se han procesado bien: si
+    algo falla (por ejemplo MySQL), la próxima vez se vuelven a leer y no se
+    pierde ninguna incidencia.
+    """
     state = _load_state()
     events = []
     events += ssh_events(read_new_lines(config.auth_log, state))
@@ -253,5 +259,4 @@ def collect_all():
     events += mysql_events(read_new_lines(config.mysql_error_log, state))
     events += disk_events()
     events += service_events()
-    _save_state(state)
-    return events
+    return events, lambda: _save_state(state)

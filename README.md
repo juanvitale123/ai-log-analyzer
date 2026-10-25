@@ -115,6 +115,7 @@ scripts/          instalación y simulación de ataque
 - Que mandarle al modelo los logs en bruto no funciona: es lento y se inventa cosas. Agrupar antes con regex y pedirle una respuesta en JSON con un esquema fijo funciona mucho mejor.
 - Usar timers de systemd en lugar de cron, y ejecutar servicios con un usuario sin privilegios.
 - Que la IA no debe tener la última palabra en lo crítico, por eso existen las reglas mínimas.
+- Que los formatos de log cambian entre versiones: Ubuntu 26.04 usa **sudo-rs** y ya no escribe la línea "3 incorrect password attempts" del sudo clásico. Lo descubrí probando y ahora detecto los fallos por la línea de PAM, que sale en los dos.
 
 ## Pendiente
 

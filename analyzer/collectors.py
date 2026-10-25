@@ -55,7 +55,11 @@ def read_new_lines(path, state):
 RE_FAILED = re.compile(r"Failed password for (?:invalid user )?(\S+) from (\S+)")
 RE_INVALID = re.compile(r"Invalid user (\S+) from (\S+)")
 RE_ACCEPTED = re.compile(r"Accepted (?:password|publickey) for (\S+) from (\S+)")
-RE_SUDO_FAIL = re.compile(r"sudo: +(\S+) : .*incorrect password attempts")
+# sudo clásico: "sudo: juan : 3 incorrect password attempts ; ..."
+RE_SUDO_FAIL = re.compile(r"sudo: +(\S+) : (\d+) incorrect password attempts")
+# PAM (sudo clásico y sudo-rs, que es el de Ubuntu 26.04):
+# "sudo: pam_unix(sudo:auth): authentication failure; ... ruser=juan ..."
+RE_SUDO_PAM = re.compile(r"pam_unix\(sudo:auth\): authentication failure;.*\bruser=(\S+)")
 
 
 def ssh_events(lines):
@@ -65,7 +69,8 @@ def ssh_events(lines):
     invalid = Counter()
     users = defaultdict(set)
     accepted = []
-    sudo_fails = Counter()
+    sudo_summary = Counter()   # intentos según la línea resumen del sudo clásico
+    sudo_pam = Counter()       # fallos según PAM
 
     for line in lines:
         m = RE_FAILED.search(line)
@@ -86,7 +91,11 @@ def ssh_events(lines):
             continue
         m = RE_SUDO_FAIL.search(line)
         if m:
-            sudo_fails[m.group(1)] += 1
+            sudo_summary[m.group(1)] += int(m.group(2))
+            continue
+        m = RE_SUDO_PAM.search(line)
+        if m:
+            sudo_pam[m.group(1)] += 1
 
     fails = {
         ip: {"count": max(failed[ip], invalid[ip]), "users": users[ip]}
@@ -113,7 +122,9 @@ def ssh_events(lines):
                 "usuario": acc["user"],
                 "fallos_previos": fails[acc["ip"]]["count"],
             })
-    for user, n in sudo_fails.items():
+    # El sudo clásico escribe las dos líneas: nos quedamos con el número mayor
+    for user in set(sudo_summary) | set(sudo_pam):
+        n = max(sudo_summary[user], sudo_pam[user])
         events.append({"source": "sudo", "type": "sudo_fallido", "usuario": user, "veces": n})
     return events
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Informe diario del analizador de logs
+
+[Service]
+Type=oneshot
+User=loganalyzer
+Group=adm
+WorkingDirectory=/opt/ai-log-analyzer
+ExecStart=/opt/ai-log-analyzer/venv/bin/python -m analyzer.main --report

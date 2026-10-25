@@ -1,0 +1,49 @@
+2026-10-25T12:01:01.123456+01:00 ubuntu-lab sshd[121]: Invalid user admin from 192.168.1.77 port 51
+2026-10-25T12:01:03.123456+01:00 ubuntu-lab sshd[121]: Failed password for invalid user admin from 192.168.1.77 port 51 ssh2
+2026-10-25T12:02:01.123456+01:00 ubuntu-lab sshd[122]: Invalid user admin from 192.168.1.77 port 52
+2026-10-25T12:02:03.123456+01:00 ubuntu-lab sshd[122]: Failed password for invalid user admin from 192.168.1.77 port 52 ssh2
+2026-10-25T12:03:01.123456+01:00 ubuntu-lab sshd[123]: Invalid user admin from 192.168.1.77 port 53
+2026-10-25T12:03:03.123456+01:00 ubuntu-lab sshd[123]: Failed password for invalid user admin from 192.168.1.77 port 53 ssh2
+2026-10-25T12:04:01.123456+01:00 ubuntu-lab sshd[124]: Invalid user admin from 192.168.1.77 port 54
+2026-10-25T12:04:03.123456+01:00 ubuntu-lab sshd[124]: Failed password for invalid user admin from 192.168.1.77 port 54 ssh2
+2026-10-25T12:05:01.123456+01:00 ubuntu-lab sshd[125]: Invalid user admin from 192.168.1.77 port 55
+2026-10-25T12:05:03.123456+01:00 ubuntu-lab sshd[125]: Failed password for invalid user admin from 192.168.1.77 port 55 ssh2
+2026-10-25T12:06:01.123456+01:00 ubuntu-lab sshd[126]: Invalid user admin from 192.168.1.77 port 56
+2026-10-25T12:06:03.123456+01:00 ubuntu-lab sshd[126]: Failed password for invalid user admin from 192.168.1.77 port 56 ssh2
+2026-10-25T12:07:01.123456+01:00 ubuntu-lab sshd[127]: Invalid user admin from 192.168.1.77 port 57
+2026-10-25T12:07:03.123456+01:00 ubuntu-lab sshd[127]: Failed password for invalid user admin from 192.168.1.77 port 57 ssh2
+2026-10-25T12:08:01.123456+01:00 ubuntu-lab sshd[128]: Invalid user admin from 192.168.1.77 port 58
+2026-10-25T12:08:03.123456+01:00 ubuntu-lab sshd[128]: Failed password for invalid user admin from 192.168.1.77 port 58 ssh2
+2026-10-25T12:10:11.000000+01:00 ubuntu-lab sshd[21]: Failed password for root from 203.0.113.9 port 41 ssh2
+2026-10-25T12:10:12.000000+01:00 ubuntu-lab sshd[22]: Failed password for root from 203.0.113.9 port 42 ssh2
+2026-10-25T12:10:13.000000+01:00 ubuntu-lab sshd[23]: Failed password for root from 203.0.113.9 port 43 ssh2
+2026-10-25T12:10:14.000000+01:00 ubuntu-lab sshd[24]: Failed password for root from 203.0.113.9 port 44 ssh2
+2026-10-25T12:10:15.000000+01:00 ubuntu-lab sshd[25]: Failed password for root from 203.0.113.9 port 45 ssh2
+2026-10-25T12:10:16.000000+01:00 ubuntu-lab sshd[26]: Failed password for root from 203.0.113.9 port 46 ssh2
+2026-10-25T12:10:17.000000+01:00 ubuntu-lab sshd[27]: Failed password for root from 203.0.113.9 port 47 ssh2
+2026-10-25T12:10:18.000000+01:00 ubuntu-lab sshd[28]: Failed password for root from 203.0.113.9 port 48 ssh2
+2026-10-25T12:10:19.000000+01:00 ubuntu-lab sshd[29]: Failed password for root from 203.0.113.9 port 49 ssh2
+2026-10-25T12:10:20.000000+01:00 ubuntu-lab sshd[210]: Failed password for root from 203.0.113.9 port 410 ssh2
+2026-10-25T12:10:21.000000+01:00 ubuntu-lab sshd[211]: Failed password for root from 203.0.113.9 port 411 ssh2
+2026-10-25T12:10:22.000000+01:00 ubuntu-lab sshd[212]: Failed password for root from 203.0.113.9 port 412 ssh2
+2026-10-25T12:10:23.000000+01:00 ubuntu-lab sshd[213]: Failed password for root from 203.0.113.9 port 413 ssh2
+2026-10-25T12:10:24.000000+01:00 ubuntu-lab sshd[214]: Failed password for root from 203.0.113.9 port 414 ssh2
+2026-10-25T12:10:25.000000+01:00 ubuntu-lab sshd[215]: Failed password for root from 203.0.113.9 port 415 ssh2
+2026-10-25T12:10:26.000000+01:00 ubuntu-lab sshd[216]: Failed password for root from 203.0.113.9 port 416 ssh2
+2026-10-25T12:10:27.000000+01:00 ubuntu-lab sshd[217]: Failed password for root from 203.0.113.9 port 417 ssh2
+2026-10-25T12:10:28.000000+01:00 ubuntu-lab sshd[218]: Failed password for root from 203.0.113.9 port 418 ssh2
+2026-10-25T12:10:29.000000+01:00 ubuntu-lab sshd[219]: Failed password for root from 203.0.113.9 port 419 ssh2
+2026-10-25T12:10:30.000000+01:00 ubuntu-lab sshd[220]: Failed password for root from 203.0.113.9 port 420 ssh2
+2026-10-25T12:10:31.000000+01:00 ubuntu-lab sshd[221]: Failed password for root from 203.0.113.9 port 421 ssh2
+2026-10-25T12:10:32.000000+01:00 ubuntu-lab sshd[222]: Failed password for root from 203.0.113.9 port 422 ssh2
+2026-10-25T12:10:33.000000+01:00 ubuntu-lab sshd[223]: Failed password for root from 203.0.113.9 port 423 ssh2
+2026-10-25T12:10:34.000000+01:00 ubuntu-lab sshd[224]: Failed password for root from 203.0.113.9 port 424 ssh2
+2026-10-25T12:10:35.000000+01:00 ubuntu-lab sshd[225]: Failed password for root from 203.0.113.9 port 425 ssh2
+2026-10-25T12:10:36.000000+01:00 ubuntu-lab sshd[226]: Failed password for root from 203.0.113.9 port 426 ssh2
+2026-10-25T12:10:37.000000+01:00 ubuntu-lab sshd[227]: Failed password for root from 203.0.113.9 port 427 ssh2
+2026-10-25T12:10:38.000000+01:00 ubuntu-lab sshd[228]: Failed password for root from 203.0.113.9 port 428 ssh2
+2026-10-25T12:10:39.000000+01:00 ubuntu-lab sshd[229]: Failed password for root from 203.0.113.9 port 429 ssh2
+2026-10-25T12:10:40.000000+01:00 ubuntu-lab sshd[230]: Failed password for root from 203.0.113.9 port 430 ssh2
+2026-10-25T12:11:00.000000+01:00 ubuntu-lab sshd[300]: Accepted password for root from 203.0.113.9 port 40000 ssh2
+2026-10-25T12:12:00.000000+01:00 ubuntu-lab sshd[301]: Accepted publickey for juan from 192.168.1.35 port 40001 ssh2
+2026-10-25T12:13:00.000000+01:00 ubuntu-lab sudo:     juan : 3 incorrect password attempts ; TTY=pts/0 ; PWD=/home/juan ; USER=root ; COMMAND=/usr/bin/ls

@@ -1,0 +1,1 @@
+2026/10/25 12:21:01 [error] 1234#1234: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.1.35, server: _, request: "GET /api/pedidos HTTP/1.1", upstream: "http://127.0.0.1:8080/api/pedidos"

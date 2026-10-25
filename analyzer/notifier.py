@@ -1,5 +1,6 @@
 """Envío de alertas por Telegram."""
 import html
+import re
 
 import requests
 
@@ -10,7 +11,8 @@ ICONS = {"baja": "🔵", "media": "🟡", "alta": "🟠", "critica": "🔴"}
 
 def send(text):
     if not config.telegram_token or not config.telegram_chat_id:
-        print("[aviso] Telegram no configurado; mensaje no enviado:\n" + text)
+        # Sin Telegram, se muestra en la terminal sin las etiquetas HTML
+        print("\n" + html.unescape(re.sub(r"<[^>]+>", "", text)) + "\n")
         return False
     url = f"https://api.telegram.org/bot{config.telegram_token}/sendMessage"
     try:

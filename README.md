@@ -87,7 +87,9 @@ sudo -u loganalyzer venv/bin/python -m analyzer.main --dry-run
 
 ## Capturas
 
-*(pendiente)*
+Alertas en Telegram después de simular un ataque de fuerza bruta SSH y un escaneo web contra la VM:
+
+<img src="docs/screenshots/telegram-alertas.png" width="380">
 
 ## Estructura
 

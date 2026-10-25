@@ -30,7 +30,7 @@ class Config:
 
     # LLM local (LM Studio, API compatible con OpenAI)
     llm_url: str = os.getenv("LLM_URL", "http://localhost:1234/v1")
-    llm_model: str = os.getenv("LLM_MODEL", "google/gemma-4-12b-qat")
+    llm_model: str = os.getenv("LLM_MODEL", "google/gemma-4-26b-a4b-qat")
     llm_timeout: int = _int("LLM_TIMEOUT", 120)
 
     # Base de datos (MySQL)
